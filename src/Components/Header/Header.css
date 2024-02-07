@@ -1,0 +1,102 @@
+.Header{
+    display: flex;
+    height:140px;
+    /* border: 1px solid red; */
+    background-color: #fff;
+    padding-top: 15px;
+}
+
+.Header_left{
+    display: flex;
+    gap: 20px;
+}
+
+.logo_Text h1{
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.logo_Text p{
+    font-size: 11px;
+    font-weight: 300;
+}
+
+.logo_Text{
+   padding-top: 10px;
+}
+
+.logo img{
+    width: 75px;
+    height: 76px;
+}
+
+.line{
+    width: 2px;
+    height: 70px;
+    border: 1px solid rgba(0, 0, 0, 0.31);
+    background-color: rgba(0, 0, 0, 0.31);
+    border-radius: 15px;
+    margin-left: 40px;
+    margin-right: 20px;
+}
+
+.text p{
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 70px;
+    gap:10px;
+}
+
+.contacts{
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    align-items: center;
+
+}
+
+.HeaderRightWrapper{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+
+.Header_right{
+    width: 100%;
+}
+
+.first{
+    width: 38px;
+    height: 38px;
+}
+
+.second{
+    width: 26px;
+    height: 26px;
+}
+
+nav ul{
+    display: flex;
+    list-style-type: none;
+    gap: 45px;
+    padding-top: 30px;
+}
+
+nav ul li{
+    font-size: 16px;
+    font-weight: 400;
+    
+}
+
+.active{
+    color: blueviolet;
+}
+
+
+

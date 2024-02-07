@@ -1,0 +1,146 @@
+.textik h3{
+    font-size: 64px;
+    font-style:normal;
+    font-weight: 400;
+    
+}
+
+.imag img{
+    position: absolute;
+    z-index: -1;
+}
+
+.imag{
+    position: relative;
+    padding-top: 47px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1354px;
+    height: 457px;
+}
+
+.textik{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.Main{
+    width: 1440px;
+    height: 950px;
+}
+
+.middle_main{
+    width: 1354px;
+    height: 214px;
+}
+
+
+.wrapper_main{
+    width: 1600px;
+    height: 1000px;
+}
+
+.up_main{
+    margin-bottom: 40px;
+}
+
+.middle_main h1{
+    display: flex;
+    justify-content: center;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 500;
+    text-decoration: underline solid;
+}
+
+.middle_main h3{
+    font-size: 26px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin-left: 60px;
+    text-indent: 4%;
+}
+
+.middle_main{
+    width: 100%;
+    height: 140px;
+}
+
+.bold{
+   font-weight: bold; 
+}
+
+.vizitka_div img{
+    width: 394px;
+    height: 300px;
+    position: absolute;
+    z-index: -1;
+}
+.vizitka_div{
+    width: 300px;
+    height: 240px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.vizitka_div p{
+    color: #FFF;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: Inter;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    width: 215px;
+    height: 83px;
+    margin-left: 28%;
+}
+.down_main{
+    height: 280px;
+    display: flex;
+    margin-top: 20px;
+}
+
+.derevo_div img{
+    width: 800px;
+    height: 280px;
+    position: relative;
+    z-index: -1;
+    object-fit: cover;
+}
+
+.derevo_div{
+    width: 900px;
+    height: 225px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.derevo_div button{
+    width: 280px;
+    height: 75px;
+    border-radius: 15px;
+    border: 1px solid rgba(244, 185, 33, 0.70);
+    background: #F4B921;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    position: absolute;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    fill: #F90;
+    stroke-width: 1px;
+    stroke: rgba(255, 153, 0, 0.05);
+    filter: drop-shadow(1px 4px 4px rgba(255, 207, 134, 0.80));
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+
+
+
+
