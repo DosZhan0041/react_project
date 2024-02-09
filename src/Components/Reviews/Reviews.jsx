@@ -5,7 +5,7 @@ import React from 'react';
 
 let Reviews =(props)=>{
     const newReview = React.useRef();
-    console.log(props);e
+    console.log(props);
     
 let addReview = ()=>{
         props.dispatch(AddReviewActionCreater())
