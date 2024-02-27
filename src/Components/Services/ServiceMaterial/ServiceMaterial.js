@@ -14,10 +14,7 @@ let ServiceMaterial = (props) => {
               props.state.material.map((material)=>(
                 <Material name={material.name} image={material.image} id={material.id} key={material.id}/>
               ))
-             /* <Material name = "Газобетон" image = "./images/Mat1.png"/>
-            <Material name = "Цемент" image = "./images/Mat2.png"/>
-            <Material name = "Арматура" image = "./images/Mat3.png"/>
-            <Material name = "Доска" image = "./images/Mat4.png"/>  */}
+              }
             </div>
         </div>
     </div>
