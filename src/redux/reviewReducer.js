@@ -26,13 +26,23 @@ let reviewReducer = (state=initialState, action)=>{
                 review: state.newReview,
                 id: state.reviews.length+1,
             }
-            state.reviews.push(newRev)
+            return{
+                ...state,
+                reviews: [...state.reviews, newRev],
+                newReview: "",
+            }
         }
         case UPDATE_NEW_REVIEW_TEXT: {
-            state.newReview = action.newReviewText;
+            return{
+                ...state,
+                newReview: action.newReviewText,
+            }
         }
+        default: 
+            return state;
     }
-    return state;
 }
+export const AddReviewActionCreater =()=>({type: ADD_REVIEW})
 
+export const UpdateNewReviewTextActionCreater =(newReview)=>({type: UPDATE_NEW_REVIEW_TEXT, newReviewText: newReview})
 export default reviewReducer;

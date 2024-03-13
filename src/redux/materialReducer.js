@@ -40,14 +40,25 @@ let materialReducer = (state=initialState, action)=>{
                 image: "./images/Mat1.png",
                 id: state.material.length+1,
             }
-            state.material.push(newMaterial)
+            return{
+                ...state,
+                material:[...state.material, newMaterial],
+                newMaterialName:"",
+                newMaterialDescription:"",
+            }
         }
         case UPDATE_NEW_MATERIAL_TEXT:{
-            state.newMaterialName = action.newMaterialNameText;
-            state.newMaterialDescription = action.newMaterialDescriptionText;
+            return{
+                ...state,
+                newMaterialName: action.newMaterialNameText,
+                newMaterialDescription: action.newMaterialDescriptionText,
+            }
         }
+        default: 
+            return state;
     }   
-    return state;
 }
+export const AddMaterialActionCreater =()=>({type: ADD_MATERIAL})
 
+export const UpdateNewMaterialTextActionCreater = (newMaterialName, newMaterialDescription)=>({type: UPDATE_NEW_MATERIAL_TEXT, newMaterialNameText: newMaterialName, newMaterialDescriptionText: newMaterialDescription})
 export default materialReducer;

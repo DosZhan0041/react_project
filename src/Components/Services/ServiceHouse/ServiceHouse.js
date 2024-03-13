@@ -12,7 +12,7 @@ let ServiceHouse = (props) => {
             <div className='wraphouse'>
             {
               props.state.houses.map((house)=>(
-                <House name = {house.name} image = {house.image} id = {house.id} key = {house.id}/>
+                <House name = {house.name} image = {house.image} id = {house.id} key = {house.id} deleteHouse={props.deleteHouse} saveChanges={props.saveChanges}/>
               ))
             /* <House name = "Из газобетона" image = "./images/Home1.png"/>
             <House name = "Из кирпича" image = "./images/Home2.png"/>

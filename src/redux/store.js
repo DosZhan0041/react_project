@@ -8,6 +8,7 @@ const ADD_REVIEW = "ADD_REVIEW";
 const UPDATE_NEW_REVIEW_TEXT = "UPDATE_NEW_REVIEW_TEXT";
 const ADD_MATERIAL = "ADD_MATERIAL"
 const UPDATE_NEW_MATERIAL_TEXT = "UPDATE_NEW_MATERIAL_TEXT"
+const SET_HOUSE = "SET_HOUSE"
 
 let store = {
         _state: {
@@ -120,6 +121,8 @@ export const UpdateNewMaterialTextActionCreater = (newMaterialName, newMaterialD
 export const AddReviewActionCreater =()=>({type: ADD_REVIEW})
 
 export const UpdateNewReviewTextActionCreater =(newReview)=>({type: UPDATE_NEW_REVIEW_TEXT, newReviewText: newReview})
+
+export const setHouseActionCreater =(houses)=>({type: SET_HOUSE, houses: houses})
 
 export default store;
 
