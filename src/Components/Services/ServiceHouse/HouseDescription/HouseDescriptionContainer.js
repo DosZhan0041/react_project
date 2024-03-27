@@ -22,9 +22,7 @@ let HouseDescriptionContainer = (props) => {
     })
 
     .then(function(data) {
-        console.log(data)
       setOneHouse(data)
-      debugger;
     })
     .catch(function(error) {
       console.error("Произошла ошибка:", error);
