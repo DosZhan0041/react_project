@@ -3,16 +3,21 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPen, faTrash } from '@fortawesome/free-solid-svg-icons';
 import './../Services.css';
 import './../../../App.css';
-
+import {useNavigate} from "react-router-dom";
+import { Redirect } from 'react-router-dom';
 const House = (props) => {
+
+  const navigate = useNavigate();
 
   const deleteHouse = () => {
     props.deleteHouse(props.id);
   };
 
-  const saveChanges =()=>{
-    props.saveChanges(props.id, props.name)
+  let redirectDescription = (id) =>{
+    navigate(`/houseDescription/${id}`)
   }
+
+  
   return (
     <div className="House">
       <img src={props.image} alt="" />
@@ -24,13 +29,9 @@ const House = (props) => {
           <FontAwesomeIcon icon={faTrash}/>
         </button>
       </div>
-      <div className="put">
-        <button>
-          <FontAwesomeIcon icon={faPen} />
-        </button>
-      </div>
+      
       <div className="more">
-        <button>Подробнее</button>
+        <button onClick={()=>{redirectDescription(props.id)}}>Подробнее</button>
       </div>
     </div>
   );

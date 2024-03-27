@@ -9,6 +9,8 @@ import Reviews from './Components/Reviews/Reviews';
 import {BrowserRouter, Route, Routes} from 'react-router-dom';
 import ServicesContainer from './Components/Services/ServicesContainer';
 import ReviewsContainer from './Components/Reviews/ReviewsContainer';
+import HouseDescriptionContainer from './Components/Services/ServiceHouse/HouseDescription/HouseDescriptionContainer';
+
 
 
 function App(props) {
@@ -21,6 +23,7 @@ function App(props) {
                 <Route path='/' element={<Main/>}/>
                 <Route path='/Services' element={<ServicesContainer />}/>
                 <Route path='/Reviews' element={<ReviewsContainer />}/>
+                <Route path='/houseDescription/:id' element={<HouseDescriptionContainer/>}/>
               </Routes>
             <Footer/>
         </div>

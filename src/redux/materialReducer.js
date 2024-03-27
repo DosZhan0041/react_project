@@ -58,7 +58,6 @@ let materialReducer = (state=initialState, action)=>{
             return state;
     }   
 }
-export const AddMaterialActionCreater =()=>({type: ADD_MATERIAL})
-
-export const UpdateNewMaterialTextActionCreater = (newMaterialName, newMaterialDescription)=>({type: UPDATE_NEW_MATERIAL_TEXT, newMaterialNameText: newMaterialName, newMaterialDescriptionText: newMaterialDescription})
+export const addMaterial =()=>({type: ADD_MATERIAL})
+export const updateNewMaterialText = (newMaterialName, newMaterialDescription)=>({type: UPDATE_NEW_MATERIAL_TEXT, newMaterialNameText: newMaterialName, newMaterialDescriptionText: newMaterialDescription})
 export default materialReducer;

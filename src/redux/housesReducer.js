@@ -3,7 +3,7 @@ const UPDATE_NEW_HOUSES_TEXT = "UPDATE_NEW_HOUSES_TEXT";
 const SET_HOUSE = "SET_HOUSE"
 const DELETE_HOUSE = "DELETE_HOUSE";
 const PUT_HOUSE = "PUT_HOUSE";
-
+const TOGGLE_PRELOADER = "TOGGLE_PRELOADER";
 let initialState = {
     houses: [
                 // {
@@ -34,6 +34,7 @@ let initialState = {
             newHouseName: "",
             newHouseDescription: "",
             changeHouse: "",
+            isLoad: true,
         };
 let housesReducer = (state = initialState, action)=>{
     switch (action.type){
@@ -95,6 +96,9 @@ let housesReducer = (state = initialState, action)=>{
         };
     }
     
+    case TOGGLE_PRELOADER: {
+      return {...state, isLoad: action.status}
+    }
 
     case UPDATE_NEW_HOUSES_TEXT:{
             return{
@@ -111,17 +115,13 @@ let housesReducer = (state = initialState, action)=>{
     }
 
     case PUT_HOUSE:{
-      debugger
-        let updateData = {
-            name: action.name,
-          };
-        
+          let updateHouse = {...action.house, description: state.newHouseDescription, name: state.newHouseName}
           fetch(`https://65e1f029a8583365b317a8da.mockapi.io/houses/v1/houses/${action.id}`, {
             method: 'PUT',
             headers: {
               'Content-Type': 'application/json'
             },
-            body: JSON.stringify(updateData)
+            body: JSON.stringify(updateHouse)
           })
           .then(function(response) {
             if (!response.ok) {
@@ -135,13 +135,14 @@ let housesReducer = (state = initialState, action)=>{
           .catch(function(error) {
             console.error("Произошла ошибка:", error);
           });
-          return{
+          return {
             ...state, 
             houses: state.houses.map(house=>{
               if(house.id===action.id){
                 return{
                   ...house,
-                  name: action.name
+                  name: state.newHouseName,
+                  description: state.newHouseDescription
                 }
               }
               return house;
@@ -153,11 +154,13 @@ let housesReducer = (state = initialState, action)=>{
          return state;
     }
 }
-export const AddHouseActionCreater =()=>({type: ADD_HOUSE})
-export const DeleteHouseActionCreater = (id)=>({type: DELETE_HOUSE, id:id})
-export const UpdateNewHousesTextActionCreater = (newHouseName, newHouseDescription)=>({type: UPDATE_NEW_HOUSES_TEXT, newHouseNameText: newHouseName, newHouseDescriptionText: newHouseDescription})
-export const setHouseActionCreater =(houses)=>({type: SET_HOUSE, houses:houses})
-export const ChangeHouseActionCreater = (id, name)=>({type: PUT_HOUSE, id:id, name:name})
+
+export const togglePreloader = (status) => ({type: TOGGLE_PRELOADER, status: status})
+export const addHouse =()=>({type: ADD_HOUSE})
+export const deleteHouse = (id)=>({type: DELETE_HOUSE, id:id})
+export const updateNewHousesText = (newHouseName, newHouseDescription)=>({type: UPDATE_NEW_HOUSES_TEXT, newHouseNameText: newHouseName, newHouseDescriptionText: newHouseDescription})
+export const setHouse =(houses)=>({type: SET_HOUSE, houses:houses})
+export const saveChanges = (id, house)=>({type: PUT_HOUSE, id:id, house:house})
 export default housesReducer;
 
 
