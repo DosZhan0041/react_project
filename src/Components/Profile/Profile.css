@@ -1,0 +1,158 @@
+
+
+.profile{
+    width: 100%;
+    height: 100vh;
+    margin-top: 30px;
+}
+
+.wrapper-profile{
+    width: 100%;
+    height: 100vh;
+}
+
+.profile-up{
+    width: 100%;
+    height: 30%;
+    background: #6B705C;
+}
+
+
+.profile-down{
+    width: 100%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: -75px;
+}
+
+.first-side{
+    width: 100%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.image-profile{
+    width: 100%;
+    height: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-profile img{
+    width: 16%;
+    height: 100%;
+    border-radius: 50%;
+    border: 4px solid #612294;
+}
+
+.second-side{
+    width: 30%;
+    height: 14%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-right: 25px;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.name-profile{
+    width: 30%;
+    height: 40%;
+    padding-top: 15px;
+    font-size: 40px;
+    font-weight: 700;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.name-profile p{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.location-profile{
+    width: 20%;
+    height: 50%;
+    font-size: 19px;
+    display: flex;
+    justify-content: center;
+    color: rgba(156, 155, 155, 0.783);
+    align-items: center;
+    margin: 5px;
+}
+.email-profile{
+    width: 20%;
+    height: 50%;
+    font-size: 19px;
+    display: flex;
+    justify-content: center;
+    color: rgba(156, 155, 155, 0.783);
+    align-items: center;
+    margin-bottom: 20px;
+    margin: 5px;
+}
+
+.number-profile{
+    width: 20%;
+    height: 10%;
+    font-size: 19px;
+    display: flex;
+    justify-content: center;
+    color: rgba(156, 155, 155, 0.783);
+    margin-top: 2px;
+}
+
+.location-dev{
+    color: rgba(156, 155, 155, 0.783);
+}
+
+.location-dev path{
+    color: rgba(156, 155, 155, 0.783);
+}
+.houses-profile, .comments-profile{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 50px;
+    margin-top: 20px;
+}
+
+.houses-profile p, .comments-profile p{
+    font-size: 18px;
+    margin-top: 5px;
+}
+
+.houses-profile{
+    border-right: 2px solid rgba(128, 128, 128, 0.934);;
+    padding-right: 60px;
+}
+
+.button-profile{
+    margin-top: 5%;
+}
+.button-profile button{
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    padding: 12px;
+    color: #000;
+    font-size: 15px;
+    background-color: rgb(227, 223, 223);
+    border: 2px solid #6B705C;
+    transition: .5s;
+}
+.button-profile button:hover{
+    color: #fff;
+    background-color: #6B705C;
+    border: 2px solid #5f0d76;
+}

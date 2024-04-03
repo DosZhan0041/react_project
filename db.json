@@ -1,0 +1,80 @@
+{
+  "users": [
+    {
+      "email": "dosya@gmail.com",
+      "password": "$2a$10$jYNRY/WEDv64iZzcLpU/FOJc5wTSBkkRPBQE6CbHS/RW4VsVS3kmC",
+      "name": "Doszhan",
+      "surname": "Ilyassov",
+      "country": "Turkey",
+      "phone": "87076877121",
+      "id": 1
+    },
+    {
+      "email": "knewit@mail.ru",
+      "password": "$2a$10$A5wUOQvPYIHulibipc6QwuQAnF9ZsCl4T..5xumPD4Ygf.NfOMRuS",
+      "name": "KnewIT",
+      "surname": "School",
+      "country": "Kazakhstan",
+      "phone": "8707777777",
+      "urlImg": "https://android-obzor.com/wp-content/uploads/2022/03/man-silhouette.jpg",
+      "id": 2
+    }
+  ],
+  "houses": [
+    {
+      "image": "https://i.pinimg.com/originals/fc/5d/b7/fc5db755293b8b05ac30122135c5d4b0.jpg",
+      "id": "1",
+      "description": "dd",
+      "name": "dd"
+    },
+    {
+      "description": "",
+      "name": "Из Кирпича",
+      "image": "https://i.pinimg.com/736x/f5/06/a8/f506a8a130c784012f2d443a5f742b15.jpg",
+      "id": "2"
+    },
+    {
+      "description": "",
+      "name": "Из Бетона",
+      "image": "https://i.pinimg.com/originals/8b/e7/18/8be718d9b51f87a8c8580745dfe0e565.jpg",
+      "id": "3"
+    },
+    {
+      "description": "",
+      "name": "2231",
+      "image": "https://i.pinimg.com/736x/41/de/86/41de869da346c7fe5a923bd005646702.jpg",
+      "id": "4"
+    }
+  ],
+  "reviews": [
+    {
+      "id": 1,
+      "review": "good",
+      "user": {
+        "id": 2,
+        "email": "knewit@mail.ru",
+        "name": "KnewIT",
+        "surname": "School",
+        "urlImg": "https://android-obzor.com/wp-content/uploads/2022/03/man-silhouette.jpg"
+      }
+    },
+    {
+      "review": "I like this service",
+      "id": 2,
+      "user": {
+        "email": "dosya@gmail.com",
+        "name": "Doszhan",
+        "surname": "Ilyassov",
+        "country": "Turkey",
+        "phone": "87076877121",
+        "id": 1,
+        "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRvc3lhQGdtYWlsLmNvbSIsImlhdCI6MTcxMjEwNTE5OSwiZXhwIjoxNzEyMTA4Nzk5LCJzdWIiOiIyIn0.4bDZ6YmYHA4vk3c-szQ3pncRhgIJ4E319n3dUz5bkwM"
+      }
+    }
+  ],
+  "images-logo": [
+    {
+      "img": "http://localhost:3000/images/logo.png"
+    }
+  ]
+}
